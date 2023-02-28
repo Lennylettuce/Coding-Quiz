@@ -3,32 +3,27 @@
 <head>
 	<meta charset = "UTF-8" />
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
-	<meta http-equiv= = "X-UA-Compatible" content = "ie=edge" />
 	<title>Web API Quiz</title>
 	<link rel = "stylesheet" href ="assets/style.css" />
 </head>
 <body>
 
+<nav class="data"><!--store view high score and time here--></nav>
+
 <header>Coding Quiz Challenge</header>
 
 <div class = "container">
-	<h2>This contains text for quiz</h2>
+	<h2>Coding Quiz Timed Challenge</h2>
 
-		<div class = "answers">
-			<P>text for potential answers</P>
+		<div class = "test-box">
+		<!--this is where the script will take over to manipulate DOM creating elements to store info for user to interact with-->	
+			<ul class = "options"></ul>
 		</div>
-		<div>
-			<!--give these answer class too? not sure if they need to be called seperatly like that yet-->
-		</div>
-		<div>
-
-		</div>
-		<div>
-
-		</div>
+		
+		
 
 		<div class= "footer" >
-			<!--display wrong or right here-->
+			<button id="start" class ="btn">Start Quiz</button>
 		</div>
 </div>
 

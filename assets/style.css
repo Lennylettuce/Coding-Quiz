@@ -12,15 +12,41 @@ body {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header{
+nav {
 	padding: 20px;
+	border: 0;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	/*storing time and high scores here, so space for two items at each end*/
+}
+
+header{
+	padding: 50px;
+	text-align: center;
+}
+
+h2 {
+	padding: 10px;
+	text-align: center;
+}
+
+.test-box {
+	padding: 200px;
 	text-align: center;
 }
 
 .container {
-
+	padding: 100px;
+	border: 0;
+	margin: auto;
+	align-items: center;
 }
 
 .footer {
-	
+	padding: 10px;
+	border: 0;
+	margin: auto;
+	text-align: center;
 }
