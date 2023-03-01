@@ -12,8 +12,10 @@
 //WHEN the game is over
 //THEN I can save my initials and score
 
+//when each question is answered make the score update, 
+//when an answer is wrong user timerCount-- maybe minus 5sec or something(?)
 
-//make var for where to display your 
+//use local storage for name/score save
 
 //make var for timer and for lack of better naming on my part timerCount too
 var timer;
@@ -109,7 +111,14 @@ function startTimer(){
   }, 1000);
 }
 
+//write functions for setting scores(sets local storage), getting scores (gets from set local storage)and checking to make sure answers are right or wrong
+function setScores(){}
 
+//add event listener to start button to start the game
+startButton.addEventListener("click", startGame);
+
+//call init to start when page opens 
+init();
 
 
 

@@ -3,28 +3,30 @@
 <head>
 	<meta charset = "UTF-8" />
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
-	<title>Web API Quiz</title>
+	<title>Javascript Quiz Homepage</title>
 	<link rel = "stylesheet" href ="assets/style.css" />
 </head>
 <body>
 	
-<!--store view high score and time here-->
+<!--store view high score and live timer here-->
 <nav class="data timer"></nav>
 
 <header>Coding Quiz Challenge</header>
 
+<!--gonna add another html page for the leaderboard page(highscores+initials)-->
 <div class = "container">
-	<h2>Coding Quiz Timed Challenge</h2>
+	<h1>Coding Quiz Timed Challenge</h1>
 
 		<div class = "test-box">
 		<!--this is where the script will take over to manipulate DOM creating elements to store info for user to interact with-->	
 			<ul class = "options"></ul>
-		</div>
-		
-		<div class= "footer" >
-			<button class = "start">Start Quiz</button>
+			
+			<a href = "game.html" id ="start" class ="btn">Start Game</a>
+			<a href = "scores.html" id ="getScores" class ="btn">Get Scores</a>
+
 		</div>
 </div>
+
 
 <script src = "assets/script.js"></script>
 </body>
