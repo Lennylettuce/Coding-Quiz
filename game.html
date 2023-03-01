@@ -6,11 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Page</title>
     <link rel = "stylesheet" src="assets/style.css" />
+    <link rel = "stylesheet" src="assets/game.css" />
 </head>
 <body>
     <h1>Good Luck!</h1>
 
-    <div class = "container"> </div>
-    
+    <div class ="container">
+        <div id = "game">
+            <div id = "text">
+                <div id = "text-item">
+                    <p id = "progress">
+                        Question
+                    </p>
+                    <div id = "rightWrong">
+                        <div id = "false"></div>
+                    </div>
+                </div>
+                <div id = "text-item">
+                    <p id = "progress">
+                        Score
+                    </p>
+                    <h2 id = "correct">
+                        True/false
+                    </h2>
+                </div>
+            </div>
+            <div id ="questions"></div>
+            <div class = "choice-box">
+                <p class = "choiceletter">A</p>
+                <p class = "choicetext" data-number="1">Choice</p>
+            </div>
+            <div class = "choice-box">
+                <p class = "choiceletter">B</p>
+                <p class = "choicetext" data-number="2">Choice</p>
+                </div>
+            <div class = "choice-box">
+                <p class = "choiceletter">C</p>
+                <p class = "choicetext" data-number="3">Choice</p>
+                 </div>
+             <div class = "choice-box">
+                <p class = "choiceletter">D</p>
+                <p class = "choicetext" data-number="4">Choice</p>
+                </div>
+            <div class = "choice-box">
+                 <p class = "choiceletter">A</p>
+                 <p class = "choicetext" data-number="5">Choice</p>
+                 </div>
+        </div>
+    </div>
+
+    <script src = "assets/game.js"></script>
 </body>
 </html>
