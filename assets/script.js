@@ -17,6 +17,12 @@
 
 //use local storage for name/score save
 
+//targeting on game page
+var question = document.querySelector('question');
+var choices = Array.from(document.querySelectorAll('choicetext'));
+var progress = document.querySelector('progress');
+var scoreText = document.querySelector('score');
+
 //make var for timer and for lack of better naming on my part timerCount too
 var timer;
 var timerCount;
@@ -40,25 +46,39 @@ var responses = [];
 
 var optionsQA = [
 {
-    question: "Commonly used data types DO NOT include: \n(a) string \n(b) boolean \n(c) alerts \n(d) numbers",
+    question: "Commonly used data types DO NOT include:"
+    choice1: 'string',
+    choice2: 'boolean',
+    choice3: 'tags',
+    choice4: 'numbers',
     answer: "c"
 },
 {
-    question: "String values are enclosed in: \n(a) parenthesis \n(b) square brackets \n(c) curly brackets \n(d) <>",
+    question: "String values are enclosed in:"
+    choice1: 'parenthesis',
+    choice2: 'square brackets',
+    choice3: 'curly brackets',
+    choiec4: '<>',
     answer: "c"
 },
 {
-    question: "Which HTML elemt does javascript go inside? \n(a) <javascript> \n(b) <script> \n(c) <scriptjs> \n(d) <js>",
+    question: "Which HTML elemt does javascript go inside?"
+    choice1: '<javascript>',
+    choice2: '<script>',
+    choice3: '<scriptjs>',
+    choice4: '<js>',
     answer: "b"
 },
 {
-    qusstion: "How do you call a function called 'myFunction' in javascript? \n(a) call myFunction() \n(b) call function myFunction() \n(c) myFunction[] \n(d) myFunction()",
+    qusstion: "How do you call a function called 'myFunction' in javascript?"
+    choice1: 'call myFunction',
+    choice2: 'call function myFunction',
+    choice3: 'myFunction[]',
+    choice4:  'myFunction()',
     answer: "d"
 }
 ];
 
-//ive defined optionsQA, now i tell it to show up in index (?)
- optionsQA = document.createElement("li");
 
 
 // make an init function for when the page loads so things start right away
@@ -78,17 +98,48 @@ function startGame(){
   renderQuestions()
 }
 
-//you can win game if you finish in (one minute) with (questions right)
-function winGame(){
+//get new questions once one has been answered(right or wrong)
+renderQuestions = () => {
+  if (availableQuestions.length === 0 || questionsCounter > maxQuesitons) {
+    localStorage.setItem('most recent score', score)
 
+    return window.location.assign('/scores.html')
+  }
+
+  questionsCounter++
+  
+  var questionsIndex = Math.floor(math.random() * availableQuestions.length)
+  currentQuestion = availableQuestions [questionsIndex]
+  question.innerText = currentQuestion.question
+
+  choices.forEach(choice => {
+    var number = choice.dataset['number']
+    choice.innerText = currentQuestion['choice' + number]
+  })
+
+  availableQuestions.splice(questionsIndex, 1)
+
+  acceptingAnswers = true;
 }
 
+choices.forEach(choice => {
+  choice.addEventListener('click', e => {
+    if(!acceptingAnswers) return
 
-//lose game if you (run out of time) or (all wrong answers) should be easy if with loop for questions
+    acceptingAnswers = false
+    var selectedChoice = e.target;
+    var selectedAnswer = selectedChoice.dataset['number'];
 
-function loseGame(){
+    if (selectedAnswer === isRight) {
+      incrementScore(Points)
+    }
+    
+    
 
-}
+  })
+})
+
+
 
 //start the timer element
 

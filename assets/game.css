@@ -7,22 +7,13 @@
 	color: whitesmoke;
 }
 
-nav {
-	padding: 20px;
-	border: 0;
-	margin: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: right;
-	/*storing time and high scores here, so space for two items at each end*/
-}
 
 .choice-box {
     display: flex;
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
-    background-color: rgb(43, 87, 87);
+    background: rgb(43, 87, 87);
     font-size: 3rem;
     min-width: 80rem;
 }
