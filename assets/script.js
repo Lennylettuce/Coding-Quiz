@@ -82,6 +82,7 @@ var optionsQA = [
 
 
 // make an init function for when the page loads so things start right away
+//maybe put this one in the scores.js too
 
 function init(){
   getScore();
