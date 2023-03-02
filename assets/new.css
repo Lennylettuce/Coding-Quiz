@@ -18,19 +18,34 @@ nav {
 	/*storing time and high scores here, so space for two items at each end*/
 }
 
+.homepage {
+	padding: 2 rem;
+	border: 0;
+	margin: auto;
+	text-align: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vw;
+	max-width: 80rem;
+}
+
 header{
-	padding: 50px;
+	padding: 20px;
 	font-size: 50px;
 	text-align: center;
 }
 
 p {
+	display: flex;
     justify-content: center;
 	padding: auto;
 	font-size: 20px;
 	text-align: center;
 }
 
+form {
+	justify-content: center;
+}
 
 .container {
 	padding: 2 rem;
@@ -43,12 +58,33 @@ p {
 	max-width: 80rem;
 }
 
+.add-ini-page {
+	padding: 2 rem;
+	border: 0;
+	margin: auto;
+	text-align: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vw;
+	max-width: 80rem;
+}
+
+.initials {
+	display: flex;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px;
+	border-radius: 4px;
+}
+
 .questions {
 	padding: 10px;
 	text-align: center;
 	font-size: 25px;
 }
-
+/*do these need stuff in them to show up er? dont know what i done did wrong*/
 .options {
     display: flex;
     margin-bottom: 0.8rem;
@@ -59,10 +95,11 @@ p {
     min-width: 80rem;
 }
 
-.start {
+.start, .submit-ini, .go-back {
 	font-size: 2rem;
 	padding: 2rem 0;
 	width: 30rem;
+	justify-content: center;
 	text-align: center;
 	margin-bottom: 1rem;
 	background-color:rgb(43, 87, 87);

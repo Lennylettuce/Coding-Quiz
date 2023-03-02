@@ -11,6 +11,7 @@
 //THEN the game is over
 //WHEN the game is over
 //THEN I can save my initials and score
+//dont use for loop 
 
 //when each question is answered make the score update, 
 //when an answer is wrong user timerCount-- maybe minus 5sec or something(?)
@@ -43,7 +44,7 @@ var userScore = [];
 var responses = [];
 
 // arrays for questions and answers options
-
+//call on each by[i]0,1,2,3
 var optionsQA = [
 {
     question: "Commonly used data types DO NOT include:"
@@ -79,7 +80,10 @@ var optionsQA = [
 }
 ];
 
-
+//increquestion by one
+//chages text content w/each 1
+//retrieve val at click event
+//write flow charts in future assignments
 
 // make an init function for when the page loads so things start right away
 //maybe put this one in the scores.js too
@@ -98,7 +102,7 @@ function startGame(){
   startTimer()
   renderQuestions()
 }
-
+//add check for which question user is on 
 //get new questions once one has been answered(right or wrong)
 renderQuestions = () => {
   if (availableQuestions.length === 0 || questionsCounter > maxQuesitons) {
@@ -109,6 +113,8 @@ renderQuestions = () => {
 
   questionsCounter++
   
+  //tell questionCounter to check which index its on and when to stop
+
   var questionsIndex = Math.floor(math.random() * availableQuestions.length)
   currentQuestion = availableQuestions [questionsIndex]
   question.innerText = currentQuestion.question
