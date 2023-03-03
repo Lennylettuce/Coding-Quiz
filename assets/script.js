@@ -43,6 +43,10 @@ var userScore = [];
 //store their responses from optionsQA input
 var responses = [];
 
+var questionCounter = 0; 
+//current question in own var [0] (right or not need to increment from here)
+//after counter++ rendernextQ
+
 // arrays for questions and answers options
 //call on each by[i]0,1,2,3
 var optionsQA = [
@@ -80,6 +84,8 @@ var optionsQA = [
 }
 ];
 
+//renderquestions function call to this container fill lis with choices
+
 //increquestion by one
 //chages text content w/each 1
 //retrieve val at click event
@@ -110,13 +116,13 @@ renderQuestions = () => {
 
     return window.location.assign('/scores.html')
   }
-
+  //this becomes current question
   questionsCounter++
   
   //tell questionCounter to check which index its on and when to stop
 
   var questionsIndex = Math.floor(math.random() * availableQuestions.length)
-  currentQuestion = availableQuestions [questionsIndex]
+  currentQuestion = availableQuestions[questionsIndex]
   question.innerText = currentQuestion.question
 
   choices.forEach(choice => {
@@ -141,7 +147,8 @@ choices.forEach(choice => {
       incrementScore(Points)
     }
     
-    
+    //questionCounter here
+    //
 
   })
 })

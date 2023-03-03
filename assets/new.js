@@ -27,7 +27,8 @@ var userScore = [];
 //store their responses from optionsQA input
 var responses = [];
 
-
+//make array of choices and questions seperate
+//come accross question call upon the html element append new li with button inside for each string in choices array
 var gameQuestions = [
    {
         question: "Commonly used data types DO NOT include:",
@@ -35,7 +36,10 @@ var gameQuestions = [
         chocie2: 'boolean',
         choice3: 'tags',
         choice4: 'numbers',
-        answer: "c"
+        answer: 'tags'
+        //tell button which one to look at
+        //each has a data attr = string 
+        //event.target choice=boolean 
     },
     {
         question: "String values are enclosed in:",
@@ -69,6 +73,7 @@ function startGame(){
     //disable the game button while game in progress
     startButton.disabled = true;
     startTimer()
+    //should only show first one make conditions for which one we're on(questionCounter)
     renderQuestions()
 }
 
@@ -76,7 +81,10 @@ function startGame(){
 
 
 //SET EACH (container AND question[i] not in use)attr to display none in if statment for the question counter function
-
+//add a class in css that hides things
+//hidden by default then as user click thru they show up
+//function that handles the question, track the question(in variable of choice)
+//
 
 //starts timer and sets up endGame function to be called
 function startTimer(){
