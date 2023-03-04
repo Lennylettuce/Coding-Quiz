@@ -30,20 +30,13 @@ var userScore = 0;
 
 //store their responses from gameOptions input
 var responses = [];
+var questionIndex
 
-var gameQuestions = [
-  {  
-    question: "Commonly used data types DO NOT include:",
-    question: "String values are enclosed in:",
-    question: "How do you call a function called 'myFunction' in javascript?",
-    question: "Which HTML elemt does javascript go inside?",
-  }
-];
-
-//make array of choices and questions seperate DONE
 //come accross question call upon the html element append new li with button inside for each string in choices array
 var gameOptions = [
    {
+        question: "Commonly used data types DO NOT include:",
+    
         options: 'string',
         options: 'boolean',
         options: 'tags',
@@ -54,6 +47,7 @@ var gameOptions = [
         //event.target choice=boolean 
     },
     {
+        question: "String values are enclosed in:",
 
         options: 'parenthesis',
         options: 'square brackets',
@@ -62,6 +56,8 @@ var gameOptions = [
         answer: 'square brackets'
     },
     {
+        question: "How do you call a function called 'myFunction' in javascript?",
+
         options: '<javascript>',
         options: '<script>',
         options: '<scriptjs>',
@@ -69,6 +65,9 @@ var gameOptions = [
         answer: '<script>',
     },
     {
+
+        question: "Which HTML elemt does javascript go inside?",
+
         options: 'call myFunction',
         options: 'call function myFunction',
         options: 'myFunction[]',
@@ -77,6 +76,25 @@ var gameOptions = [
     }
     ];
  
+var shuffleQs
+
+function startGame(){
+    homePage.classList.add('hide')
+    initialPage.classList.add('hide')
+    scorePage.classList.add('hide')
+    shuffleQs = gameOptions.sort(()=>Math.random()-.5)
+    
+    questionIndex = 0
+
+    gameContainer.classList.remove('hide')
+    startTimer()
+    setNextQuestion()
+}
+
+function setNextQuestion(){
+    showQuestion(shuffleQs[questionIndex])
+}
+
 
 
 
@@ -106,8 +124,9 @@ function startTimer(){
     }, 1000);
 }
 
-renderQuestions(){
-    gameContainer.classList.remove("hide");
+
+function renderQuestions(){
+
 }
 
 function endGame(){
@@ -116,17 +135,14 @@ function endGame(){
         return; 
     }
     
-    if(gameQuestions[3]) {
-        //get add-ini-page to show up take off display none 
-    }
 }
 //set this to auto switch to other div display thereby ending the game(could alert message to user?)
 
 
 //start game with this function inside this click event, functions and vars listed above so this knows what to do before its called
 startButton.on('click', function() {
-   homePage.classList.add("hide");
-   gameContainer.classList.remove("hide");
+   homePage.classList.add(".hide");
+   gameContainer.classList.remove(".hide");
    //should add/remove hidden option for those containers
     timerCount = 60;
     startTimer()
@@ -146,8 +162,8 @@ submitBtn.on('click', function(event) {
         localStorage.setItem("Initials", userIni);
     }
 
-    scorePage.classList.remove("hide");
-    initialPage.classList.add("hide");
+    scorePage.classList.remove(".hide");
+    initialPage.classList.add(".hide");
     //get display none off scorepage
 })
 //linked in new.html, gonna do this all in one page instead, and keep the old trial to complete at later date
