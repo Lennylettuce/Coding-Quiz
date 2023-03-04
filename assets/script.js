@@ -147,8 +147,7 @@ choices.forEach(choice => {
       incrementScore(Points)
     }
     
-    //questionCounter here
-    //
+    
 
   })
 })
