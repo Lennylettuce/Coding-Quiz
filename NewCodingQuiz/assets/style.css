@@ -1,0 +1,91 @@
+
+  /*copy and pasted from new.css, this is the fourth version of this assignment for me*/
+  *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgb(42, 30, 112);
+        color: whitesmoke;
+    }
+    
+    
+    nav {
+        padding: 20px;
+        border: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        /*storing time and high scores here, so space for two items at each end*/
+    }
+    
+    .container {
+        padding: 0;
+        border: 0;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vw;
+        max-width: 80rem;
+    }
+
+
+    
+    .question-display {
+        padding: 20px;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+
+    
+    .initials {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+    }
+    
+    h2 {
+        padding: 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .option {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0.8rem;
+        width: 100%;
+        border-radius: 4px;
+        background: rgb(43, 87, 87);
+        font-size: 3rem;
+        min-width: 80rem;
+    }
+    
+    .start-btn, .submit {
+        font-size: 2rem;
+        padding: 2rem 0;
+        width: 30rem;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 1rem;
+        background-color:rgb(43, 87, 87);
+        border-radius: 4px;
+    }
+    
+    /*for when you're in the game and can't exit*/
+    .btn[disabled]:hover {
+        cursor: not-allowed;
+    }
+    
+
+/*.hide {
+    display: none;
+}*/

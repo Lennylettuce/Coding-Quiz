@@ -95,8 +95,24 @@ function setNextQuestion(){
     showQuestion(shuffleQs[questionIndex])
 }
 
+function renderQuestions(question){
+    questions.innerText = question.question
+    question.options.forEach(answer => {
+        var btn = document.createElement('button')
+        btn.innerText = options.text
+        btn.classList.add('btn')
+        
+        if (options.answer) {
+        btn.dataset.answer = options.answer
+        }
+        btn.addEventListener('click',selectAnswer)
+        
+    })
+}
 
+function selectAnswer(){
 
+}
 
 //SET EACH (container AND question[i] not in use)attr to display none in if statment for the question counter function
 //add a class in css that hides things
