@@ -11,3 +11,4 @@ This project is a timed coding quiz for students to see how many of the set ques
 4.https://www.youtube.com/watch?v=f4fB9Xg2JEY - tutorial on javascript made game, helped with all aspects
 5.https://www.sitepoint.com/simple-javascript-quiz/ - help with functions
 6.Had a tutoring session with Andrew T. last week, comments in one of the js files
+7. https://www.codingninjas.com/codestudio/library/how-to-create-a-javascript-quiz-code -all aspects
