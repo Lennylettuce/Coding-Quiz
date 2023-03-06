@@ -211,11 +211,11 @@ function getLeaderboard() {
 
 
 function renderLeaderboard() {
-  let sortedLeaderboardArray = sortLeaderboard();
+  let LeaderboardArray = localStorage.getItem("leaderboardArray");
   const highscoreList = document.querySelector("#highscore-list");
   highscoreList.innerHTML = "";
-  for (let i = 0; i < sortedLeaderboardArray.length; i++) {
-    let leaderboardEntry = sortedLeaderboardArray[i];
+  for (let i = 0; i < LeaderboardArray.length; i++) {
+    let leaderboardEntry = LeaderboardArray[i];
     let newListItem = document.createElement("li");
     newListItem.textContent =
       leaderboardEntry.initials + " - " + leaderboardEntry.score;
