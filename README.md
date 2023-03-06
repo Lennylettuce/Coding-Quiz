@@ -2,7 +2,7 @@
 
 This project is a timed coding quiz for students to see how many of the set questions they can get right and allow them to save their initials in the leaderboard page. This project utilized html, css, javascript and API methods to make an interactive game for users to test their knowledge of javascript. Sources cited below:
 
-[![coding-quiz alt text](./assets/screenshot.png)](./assets/screenshot.png)
+[![coding-quiz alt text](./assets/quiz-screenshot.png)](./assets/quiz-screenshot.png)
 
 ## Cited Sources
 1.https://git.bootcampcontent.com/Washington-University-in-St.-Louis/WUSTL-VIRT-FSF-PT-01-2023-U-LOLC - all aspects

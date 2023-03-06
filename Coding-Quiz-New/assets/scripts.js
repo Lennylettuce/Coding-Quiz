@@ -57,7 +57,8 @@ function hideResultText() {
 var timerInterval;
 var time;
 var currentQuestion;
-
+var score = document.querySelector("#score");
+var points;
 document.querySelector("#start-button").addEventListener("click", startQuiz);
 
 function startQuiz() {
@@ -67,6 +68,7 @@ function startQuiz() {
 
   
   currentQuestion = 0;
+  points = 0;
   displayQuestion();
 
   
@@ -108,7 +110,7 @@ function displayQuestion() {
 }
 
 
-document.querySelector("#options").addEventListener("click", checkAnswer);
+document.querySelector("#game-options").addEventListener("click", checkAnswer);
 
 //Compare text content of button pressed with that of the current question 
 function optionRight(optionButton) {
@@ -122,6 +124,7 @@ function checkAnswer(eventObject) {
   if (optionRight(optionButton)) {
     resultText.textContent = "Correct!";
     setTimeout(hideResultText, 1000);
+    points++;
   } else {
     resultText.textContent = "Incorrect!";
     setTimeout(hideResultText, 1000);
@@ -138,6 +141,7 @@ function checkAnswer(eventObject) {
   
   currentQuestion++;
   
+
   if (currentQuestion < questions.length) {
     displayQuestion();
   } else {
@@ -146,14 +150,13 @@ function checkAnswer(eventObject) {
 }
 
 
-var score = document.querySelector("#score");
 
-
+//change score to score not time
 function endQuiz() {
   clearInterval(timerInterval);
   hideCards();
   scoreCard.removeAttribute("hidden");
-  score.textContent = time;
+  score.textContent = score;
 }
 
 var submitButton = document.querySelector("#submit-button");
@@ -174,7 +177,7 @@ function storeScore(event) {
   
   let leaderboardItem = {
     initials: inputElement.value,
-    score: time,
+    score: points,
   };
 
   updateStoredLeaderboard(leaderboardItem);
@@ -219,6 +222,9 @@ function renderLeaderboard() {
     highscoreList.append(newListItem);
   }
 }
+
+
+
 
 function showLeaderboard() {
   hideCards();
