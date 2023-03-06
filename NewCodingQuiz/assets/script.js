@@ -18,42 +18,32 @@ var score = 0;
 var questions = [
     {
         question: "Commonly used data types DO NOT include:",
-        answers: [
-            
-            {option: "boolean", answer: false},
-            {option: "alerts", answer: true},
-            
-        ]
+        options:  ["1. boolean",
+                     "2. alerts", ],
+        answer: "2. alerts",    
     },
 
     {   
         question: "String values are enclosed in:",
-        answers: [
-            
-            {option: "<>", answer: false},
-            {option: "square brackets", answer: true}
-        ]
+            options: ["1. <>", 
+                "2. square brackets", 
+            ],
+            answer: "2. square brackets",
     },
 
     {   
         question: "How does the javascript tag appear?",
-        answers: [
-            {option: "<script>", answer: true},
-            {option: "<js>", answer: false},
-            
-        ]
+           options: ["1. <javascript>", "2. <script>"],
+           answer: "2. <script>",
     },
 
     {   
         question: "How do you call a function named 'myFunciton'?",
-        answers: [
-            {option: "myfunction[]", answer: false},
-            {option: "myFunction()", answer: true},
-            
-        ]
-    }
+            options: ["1. myFunction()", "2.myfunction[]"],
+            answer: "1. myFunction()",
+    },
 
-]
+];
 
 
 

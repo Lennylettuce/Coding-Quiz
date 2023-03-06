@@ -1,0 +1,85 @@
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(42, 30, 112);
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(12, 66, 36);
+  color: whitesmoke;
+  padding: 3vh;
+}
+
+/*for time element in HTML*/
+time {
+  min-width: 85px;
+}
+
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  display: block;
+  color: whitesmoke;
+  background-color: rgb(12, 66, 36);
+  padding: 2vh;
+  border-radius: 8px;
+  border: none;
+}
+
+.card {
+  max-width: 80%;
+  margin-top: 15vh;
+  border: solid;
+  border-width: 2px;
+  padding: 5vw;
+  border-radius: 30px;
+  border-color: lightgray;
+  box-shadow: 10px 5px 5px lightgray;
+}
+
+#start-screen {
+  display: inline;
+  text-align: center;
+}
+
+.option-button {
+  width: 100%;
+  text-align: left;
+  margin: 5px;
+}
+
+#results {
+  display: none;
+}
+
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#initials {
+  width: 25%;
+  margin: 8px;
+  padding: 1vh;
+}
+
+
+.highscore-list {
+  padding-inline-start: 20px;
+}
+
+@media screen and (min-width: 850px) {
+  .card {
+    max-width: 680px;
+  }
+}
+

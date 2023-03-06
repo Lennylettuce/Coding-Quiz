@@ -37,11 +37,8 @@ var gameOptions = [
    {
         question: "Commonly used data types DO NOT include:",
     
-        options: 'string',
-        options: 'boolean',
-        options: 'tags',
-        options: 'numbers',
-        answer: 'tags'
+        options: ['string','boolean', 'tags','numbers'],
+        answer: 'tags',
         //tell button which one to look at
         //each has a data attr = string 
         //event.target choice=boolean 
@@ -53,7 +50,7 @@ var gameOptions = [
         options: 'square brackets',
         options: 'curly brackets',
         options: '<>',
-        answer: 'square brackets'
+        answer: 'square brackets',
     },
     {
         question: "How do you call a function called 'myFunction' in javascript?",

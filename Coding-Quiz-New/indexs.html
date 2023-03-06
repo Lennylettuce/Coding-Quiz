@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <title>Javascript Quiz</title>
+</head>
+
+<body>
+    <header>
+        <time>Time: <span id="time"></span></time>
+    </header>
+
+    <main>
+        <div id=start-card class="card">
+            <h2 id=title>Coding Quiz</h2>
+            <p> Welcome to the coding quiz! <br><br> You have 60seconds to finish the quiz, any wrong answers will cost you 10seconds.</p>
+            <button id=start-button class="button">Start Quiz</button>
+        </div>
+
+        <div hidden id=question-card class="card">
+
+            <h2 id=question-text></h2>
+
+            <div id=options>
+                <button id=option class="button option-button"></button>
+                <button id=option class="button option-button"></button>
+            </div>
+
+            
+            <div id=results>
+                <hr>
+                <p id=result-text></p>
+            </div>
+
+        </div>
+
+        <div hidden id=score-card class="card">
+            <h2>All done!</h2>
+            <p>Your final score is <span id=score></span>.</p>
+            <form class="form" id="submission-form">
+                  <label for="initials">Enter initials: </label>
+                  <input type="text" id="initials">
+                  <button id="submit-button" class="button">Submit</button>
+            </form>
+        </div>
+
+        <div hidden id=leaderboard-card class="card">
+            <h2>Highscores</h2>
+            <ol id="highscore-list">
+            </ol>
+        </div>
+
+    </main>
+    
+    <script src="./assets/scripts.js"></script>
+</body>
+
+</html>

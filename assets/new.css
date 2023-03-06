@@ -103,11 +103,4 @@ form {
 	border-radius: 4px;
 }
 
-/*for when you're in the game and can't exit*/
-.btn[disabled]:hover {
-	cursor: not-allowed;
-}
 
-@media screen and (max-width: 768px){
-	body{}
-}
